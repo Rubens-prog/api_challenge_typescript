@@ -22,11 +22,11 @@ export class Deal {
   @JoinTable({
     name: "contacts_deals",
     joinColumn: {
-      name: "contact_id",
+      name: "deal_id",
       referencedColumnName: "id",
     },
     inverseJoinColumn: {
-      name: "deal_id",
+      name: "contact_id",
       referencedColumnName: "id",
     },
   })

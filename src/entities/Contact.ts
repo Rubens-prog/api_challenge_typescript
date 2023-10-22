@@ -15,6 +15,8 @@ export class Contact {
   @Column({ type: "text" })
   phone: string;
 
-  @ManyToMany(() => Deal, (deal) => deal.contacts)
+  @ManyToMany(() => Deal, (deals) => deals.contacts, {
+    cascade: true,
+  })
   deals: Deal[];
 }
